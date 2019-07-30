@@ -1,0 +1,67 @@
+package controller;
+
+import java.util.Scanner;
+
+import pojo.User;
+import service.LoginService;
+import service.RegisterService;
+import service.RegisterServiceImpl;
+
+public class RegisterController {
+
+
+	  Scanner sc = new Scanner(System.in);
+	  RegisterService refRegisterService; 
+	  User refUser;                  
+	  LoginService refLoginService;       
+	
+	 public void userRegisterController()
+	 {
+		 userInputEmail();      
+	 }
+	 
+	public void userInputEmail()
+	{
+		refRegisterService = new RegisterServiceImpl();  
+		refUser = new User();     
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter email address: ");
+		String email = sc.next();
+		refUser.setUserEmail(email);    
+        refRegisterService.checkEmail(refUser);  
+        System.out.println();
+		
+	}
+	
+	public void userInputPassword()
+	{
+		
+		System.out.print("Enter Password: ");
+	    String password = sc.next();
+		refUser.setUserPassword(password);  
+		userInputReTypePassword();   
+	}	
+	
+	
+	
+	public void userInputReTypePassword()
+	{
+
+		Scanner sc = new Scanner(System.in);
+	    System.out.print("Re-type password: ");
+		String retypePassword = sc.next();
+		refUser.setRetypePassword(retypePassword);  
+	    refRegisterService.checkPassword(refUser);  
+ 		
+    }
+
+	public void userInputSecurityColor()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("What is your favourite color? ");
+ 		String color = sc.next();
+ 		refUser.setSecurityColor(color);   
+ 		refRegisterService.SecurityKey(refUser);  
+	}
+}
