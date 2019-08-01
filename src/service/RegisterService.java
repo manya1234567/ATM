@@ -9,6 +9,8 @@ public interface RegisterService {
 	void checkEmail(User refUser);
 
 	void SecurityKey(User refUser);
+
+	
 	
 
 }

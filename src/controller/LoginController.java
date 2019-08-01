@@ -14,11 +14,11 @@ public class LoginController {
 	
 	public void userLoginController() {
 		
-		userInput();
+		userLoginInput();
 		
 	}
 	
-	void userInput() {
+	void userLoginInput() {
 		Scanner sc = new Scanner(System.in);
 		
 		 System.out.println();
