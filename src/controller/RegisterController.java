@@ -11,9 +11,9 @@ public class RegisterController {
 
 
 	  Scanner sc = new Scanner(System.in);
-	  RegisterService refRegisterService; 
-	  User refUser;                  
-	  LoginService refLoginService;       
+	static RegisterService refRegisterService = new RegisterServiceImpl(); 
+	 static User refUser = new User();                  
+	     
 	
 	 public void userRegisterController()
 	 {
@@ -22,8 +22,7 @@ public class RegisterController {
 	 
 	public void userInputEmail()
 	{
-		refRegisterService = new RegisterServiceImpl();  
-		refUser = new User();     
+		
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter email address: ");
@@ -36,6 +35,7 @@ public class RegisterController {
 	
 	public void userInputPassword()
 	{
+		 
 		
 		System.out.print("Enter Password: ");
 	    String password = sc.next();
@@ -47,7 +47,7 @@ public class RegisterController {
 	
 	public void userInputReTypePassword()
 	{
-
+	
 		Scanner sc = new Scanner(System.in);
 	    System.out.print("Re-type password: ");
 		String retypePassword = sc.next();
@@ -58,6 +58,7 @@ public class RegisterController {
 
 	public void userInputSecurityColor()
 	{
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("What is your favourite color? ");
  		String color = sc.next();

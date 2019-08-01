@@ -12,9 +12,9 @@ public class AtmApplication {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		LoginController refLoginController = new LoginController();
-		RegisterController refRegisterController = new RegisterController();
-		ForgetPasswordController refForgetPasswordController = new ForgetPasswordController();
+		
+		
+		//ForgetPasswordController refForgetPasswordController = new ForgetPasswordController();
 		
 		 System.out.println("User Home Page");
 		 
@@ -37,22 +37,23 @@ public class AtmApplication {
 	   	 
 	   	 case 1:
 	   	 {
+	   		RegisterController refRegisterController = new RegisterController();
 	   		refRegisterController.userRegisterController();
 	   		break;
 	   	 }
 	   	  case 2:
 	   	 {
-	   		
+	   		LoginController refLoginController = new LoginController();
 	   		refLoginController.userLoginController();     
 	   		break;
 	   	 }
 	   	 
-	   	 case 3:
+	   	/* case 3:
 	   	 {
 	   		refForgetPasswordController.userForgetPasswordController();
 			 
 	   		 break;
-	   	 }
+	   	 }*/
 	  
 	   	 case 4:
 	   	 {
