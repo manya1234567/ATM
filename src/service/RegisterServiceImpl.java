@@ -10,9 +10,9 @@ import pojo.User;
 
 public class RegisterServiceImpl implements RegisterService {
 
-	RegisterController refRegisterController = new RegisterController();
-	RegisterDAO refRegisterDAO = new RegisterDAOImpl();
-	User refUser = new User();
+	static RegisterController refRegisterController = new RegisterController();
+	static RegisterDAO refRegisterDAO = new RegisterDAOImpl();
+	static User refUser = new User();
 	@Override
 	public void checkPassword(User ref) {
 		
