@@ -11,7 +11,7 @@ public class LoginDAOImpl implements LoginDAO {
 	@Override
 	public boolean loginValidate(User ref) {
 		
-		if (ref.getUserEmail().equals("opt@gmail.com") && ref.getUserPassword().equals("test")) {
+		if (ref.getUserEmail().equals("opt@gmail.com") && ref.getUserPassword().equals("xyz123")) {
 			status = true;
 		} else {
 			status = false;

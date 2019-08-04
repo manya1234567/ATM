@@ -14,8 +14,6 @@ public class AtmApplication {
 		
 		
 		
-		//ForgetPasswordController refForgetPasswordController = new ForgetPasswordController();
-		
 		 System.out.println("User Home Page");
 		 
 	   	 System.out.println("1.Register");        
@@ -48,12 +46,14 @@ public class AtmApplication {
 	   		break;
 	   	 }
 	   	 
-	   	/* case 3:
+	   	case 3:
 	   	 {
+	   		ForgetPasswordController refForgetPasswordController = new ForgetPasswordController();
 	   		refForgetPasswordController.userForgetPasswordController();
+	   		     
 			 
 	   		 break;
-	   	 }*/
+	   	 }
 	  
 	   	 case 4:
 	   	 {
